@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font: 400 15px/1.8 "Lato", sans-serif;
+      color: #777;
+    }
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      position: relative;
+      opacity: 0.65;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .bgimg-1 {
+      background-image: url("img_parallax.jpg");
+      min-height: 600px;
+    }
+
+    .bgimg-2 {
+      background-image: url("img_parallax2.jpg");
+      min-height: 400px;
+    }
+
+    .bgimg-3 {
+      background-image: url("img_parallax3.jpg");
+      min-height: 400px;
+    }
+
+    .header {
+      /*       position: fixed; */
+      width: 100%;
+      z-index: 3;
+      background-color: #fff;
+      text-align: center;
+      text-align: justify;
+      transition: opacity .5s, visible .5s;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      /* border-bottom: #777 1px solid; */
+    }
+
+    .header .title {
+      flex-grow: 6;
+      padding-left: 2rem;
+      font-weight: bold;
+    }
+
+    .header .language {
+      margin-top: 20px;
+      flex-grow: 1;
+    }
+
+    .header .language a {
+      text-transform: uppercase;
+      font: 16px "Lato", sans-serif;
+      color: #777;
+      margin: 3px;
+    }
+
+    .header .language a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 44px);
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .caption span.border {
+      background-color: #111;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }
+
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+    }
+
+    .recipes {
+      display: flex;
+      color: #777;
+      background-color: white;
+      text-align: center;
+      padding: 50px 80px;
+      text-align: justify;
+    }
+
+    .recipes .recipe1,
+    .recipes .recipe2 {
+      flex-grow: 1;
+      display: block;
+      text-align: center;
+    }
+
+    .recipes .recipe1 img,
+    .recipes .recipe2 img {
+      width: 80%;
+    }
+
+    .recipes .recipe1 a,
+    .recipes .recipe2 a {
+      padding: 18px;
+    }
+
+    .recipes .recipe1 a:hover,
+    .recipes .recipe2 a:hover {
+      cursor: pointer;
+      color: white;
+      background-color: #777;
+      transition: 0.5s ease-in;
+    }
+
+    .footer {
+      display: flex;
+      color: #ddd;
+      background-color: #1d2020;
+      text-align: center;
+      padding: 20px 80px;
+      text-align: justify;
+      text-align: center;
+    }
+
+    .footer .left-side {
+      flex-grow: 1;
+    }
+
+    .footer .right-side {
+      flex-grow: 1;
+    }
+
+    .footer .right-side p:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .footer .social {
+      display: block;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .footer .social img {
+      max-width: 50px;
+      border-bottom: transparent 2px solid;
+    }
+
+    .footer .social img:hover {
+      border-bottom: whitesmoke 2px solid;
+      cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 768px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+      }
+    }
+
+    @media only screen and (max-device-width: 768px) {
+
+      .recipes,
+      .footer {
+        padding: 20px 10px;
+      }
+
+      .bgimg-1 {
+        min-height: 400px;
+      }
+
+      .bgimg-1 .caption span.border {
+        background-color: transparent;
+      }
+
+      .bgimg-1 .caption {
+        background-color: #111;
+        width: 80%;
+        margin-left: calc(10% - 18px);
+        padding: 18px;
+      }
+
+      .footer .social img {
+        max-width: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="title">
+      <h3>Gordon Ramsey</h3>
+    </div>
+    <div class="language">
+      <a>RU</a>
+      <a style="color: #111">EN</a>
+      <a>HE</a>
+    </div>
+
+  </header>
+
+
+
+  <div class="bgimg-1">
+    <div class="caption">
+      <span class="border">right place for foodie</span>
+    </div>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Personality</h3>
+    <p>Ramsay's reputation is built upon his goal of culinary perfection, which is associated with winning three
+      Michelin stars. His mentor, Marco Pierre White, noted that he is highly competitive. Since the airing of
+      Boiling Point, which followed Ramsay's quest of earning three Michelin stars, the chef has also become infamous
+      for his fiery temper and use of expletives. Ramsay once famously ejected food critic A. A. Gill, whose
+      dining companion was Joan Collins, from his restaurant, leading Gill to state that "Ramsay is a wonderful chef,
+      just a really second-rate human being." Ramsay admitted in his autobiography that he did not mind if Gill
+      insulted his food, but a personal insult he was not going to stand for. Ramsay has also had confrontations with
+      his kitchen staff, including one incident that resulted in the pastry chef calling the police. A 2005
+      interview reported Ramsay had retained 85% of his staff since 1993. Ramsay attributes his management style
+      to the influence of previous mentors, notably chefs Marco Pierre White and Guy Savoy, father-in-law, Chris
+      Hutcheson, and Jock Wallace, his manager while a footballer at Rangers.</p>
+    <p>Ramsay's ferocious temper has contributed to his media appeal in both the United Kingdom and the United States,
+      where his programmes are produced. MSN Careers featured an article about television's worst bosses,
+      which listed Ramsay as the only non-fictional boss. They cited his frequent loss of his temper and his harsh
+      critiques, notably when he picks on something other than cooking ability, such as calling someone a "chunky
+      monkey".</p>
+
+    <p>TV Guide included him in their 2013 list of The 60 Nastiest Villains of All Time. Despite being known for
+      his ferocious temper, Ramsay has been well-received as the host of Masterchef Junior: in contrast to his
+      interaction with adults, Ramsay was shown to be more patient and sensitive to the children featured on the
+      show. Despite his competitiveness and fiery temper, he showed far more understanding and empathy towards
+      children, amateur and special needs chefs (notably Christine Hà on MasterChef), although he
+      continued to offer constructive criticism.</p>
+
+  </div>
+
+
+
+  <div class="bgimg-3">
+    <div class="caption">
+      <span class="border">recipes</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div class="recipes">
+      <div class="recipe1">
+        <img src="./1.jpg" />
+        <h3 style="text-align:center;">Gordon's simple marinara</h3>
+        <p></p>
+        <a>view recipe</a>
+      </div>
+      <div class="recipe2">
+        <img src="./2.png" />
+        <h3 style="text-align:center;">chocolate and avocado musse</h3>
+        <p></p>
+        <a>view recipe</a>
+      </div>
+    </div>
+    <div class="recipes">
+      <div class="recipe1">
+        <img src="./3.png" />
+        <h3 style="text-align:center;">Banana ice cream</h3>
+        <p></p>
+        <a>view recipe</a>
+      </div>
+      <div class="recipe2">
+        <img src="./4.png" />
+        <h3 style="text-align:center;">spring green wraps</h3>
+        <p></p>
+        <a>view recipe</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <span class="border">
+        best of the best</span>
+    </div>
+
+  </div>
+
+  <div style="position:relative;">
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+      <h3 style="text-align:center;">Awards</h3>
+      <p>Opened in September 1998, Restaurant Gordon Ramsay was Ramsay's first solo restaurant, located at Royal
+        Hospital Road, London. In 2001, it was voted Top Restaurant in the UK in the London Zagat Survey and was awarded
+        its third Michelin star.
+
+        He was appointed Officer of the Order of the British Empire (OBE) by Queen Elizabeth II in the 2006 honours list
+        for services to the hospitality industry, but almost missed the award when his plane was delayed.
+
+        In July 2006, Ramsay won the Catey award for "Independent Restaurateur of the Year", becoming only the third
+        person to have won three Catey awards. Ramsay's two previous Catey awards were in 1995 (Newcomer of the Year)
+        and 2000 (Chef of the Year). The other two triple-winners are Michel Roux and Jacquie Pern. In September 2006,
+        he was named as the most influential person in the UK hospitality industry in the annual Caterersearch 100 list,
+        published by Caterer and Hotelkeeper magazine. He overtook Jamie Oliver, who had been top of the list in 2005.
+        Also in 2006, Ramsay was nominated as a candidate for Rector of the University of St Andrews, but lost at the
+        polls to Simon Pepper.
+
+        Ramsay's flagship restaurant, Restaurant Gordon Ramsay, was voted London's top restaurant in Harden's for eight
+        years, but in 2008 was placed below Petrus, a restaurant run by former protégé Marcus Wareing. In January 2013,
+        Ramsay was inducted into the Culinary Hall of Fame.</p>
+    </div>
+  </div>
+
+  <div class="bgimg-1">
+    <div class="caption">
+      <span class="border">stay with us</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div class="footer">
+      <div class="left-side">
+        <p>CONTACT INFORMATION</p>
+        <p> Gordon Ramsay Group</br>
+          539-547 Wandsworth Road</br>
+          London</br>
+          SW8 3JD</br></br>
+
+          Tel: 020 7592 1360</p>
+      </div>
+      <div class="social">
+        <p>SOCIAL MEDIA</p>
+        <a href="https://www.facebook.com/gordonramsay"><img src="./fb.jpg" /></a>
+        <a href="https://www.instagram.com/gordongram/"><img src="./insta.jpg" /></a>
+        <a href="https://www.youtube.com/user/gordonramsay"><img src="./youtube.jpg" /></a>
+        <p>gordonramsay.com</p>
+      </div>
+      <div class="right-side">
+        <p>CAREERS</p>
+        <p>RESTAURANTS</p>
+        <p>CHARITY</p>
+        <p>PRESS</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
